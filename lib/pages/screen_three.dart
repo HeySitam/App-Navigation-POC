@@ -7,8 +7,11 @@ class ScreenThree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Screen Three"),),
-      body: Center(
-        child: ElevatedButton(onPressed: (){}, child: const Text("Navigate"),) ,),
+      body: ColoredBox(
+        color: Colors.cyan,
+        child: Center(
+          child: ElevatedButton(onPressed: (){}, child: const Text("Navigate"),) ,),
+      ),
     );
   }
 }

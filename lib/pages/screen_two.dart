@@ -7,8 +7,11 @@ class ScreenTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Screen Two"),),
-      body: Center(
-        child: ElevatedButton(onPressed: (){}, child: const Text("Navigate"),) ,),
+      body: ColoredBox(
+        color: Colors.blue,
+        child: Center(
+          child: ElevatedButton(onPressed: (){}, child: const Text("Navigate"),) ,),
+      ),
     );
   }
 }

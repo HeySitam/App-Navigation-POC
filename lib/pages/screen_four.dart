@@ -7,8 +7,11 @@ class ScreenFour extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Screen Four"),),
-      body: Center(
-        child: ElevatedButton(onPressed: (){}, child: const Text("Navigate"),) ,),
+      body: ColoredBox(
+        color: Colors.lime,
+        child: Center(
+          child: ElevatedButton(onPressed: (){}, child: const Text("Navigate"),) ,),
+      ),
     );
   }
 }
