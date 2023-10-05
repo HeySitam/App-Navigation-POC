@@ -14,8 +14,9 @@ class ScreenOne extends StatelessWidget {
         color: Colors.amber,
         child: Center(
           child: ElevatedButton(onPressed: (){
-            navigateUsingPush(context, const ScreenTwo(), AppRoute.screenTwoRoute);
-          }, child: const Text("Navigate"),) ,),
+           // navigateUsingPush(context, const ScreenTwo(), AppRoute.screenTwoRoute);
+            navigateUsingPushNamed(context, AppRoute.screenTwoRoute);
+          }, child: const Text("Navigate to Screen Two"),) ,),
       ),
     );
   }
