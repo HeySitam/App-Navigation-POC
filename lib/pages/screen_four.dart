@@ -1,6 +1,9 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_navigation/pages/screen_three.dart';
 import 'package:flutter_navigation/pages/screen_two.dart';
+import 'package:flutter_navigation/utils/app_navigator.dart';
 import 'package:flutter_navigation/utils/supporting_methods.dart';
 
 import '../utils/app_routes.dart';
@@ -22,6 +25,7 @@ class ScreenFour extends StatelessWidget {
             // navigateUsingPopUntil(context, AppRoute.screenOneRoute);
               //navigateUsingPopAndPushNamed(context, AppRoute.screenTwoRoute);
               //navigateUsingPushReplacementNamed(context, AppRoute.screenTwoRoute);
+          log("route stack list is ${AppNavigator.routeNameList}");
           }, child: const Text("Navigate"),) ,),
       ),
     );

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_navigation/utils/app_routes.dart';
 
+import 'app_navigator.dart';
+
 navigateUsingPush(BuildContext context, Widget screen, String routeName) {
   Navigator.push(
       context,
@@ -10,7 +12,7 @@ navigateUsingPush(BuildContext context, Widget screen, String routeName) {
 }
 
 navigateUsingPushNamed(BuildContext context, String routeName) {
-  Navigator.pushNamed(
+  AppNavigator.pushNamed(
       context,
       routeName);
 }
