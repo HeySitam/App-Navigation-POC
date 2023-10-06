@@ -25,6 +25,7 @@ class ScreenFour extends StatelessWidget {
             // navigateUsingPopUntil(context, AppRoute.screenOneRoute);
               //navigateUsingPopAndPushNamed(context, AppRoute.screenTwoRoute);
               //navigateUsingPushReplacementNamed(context, AppRoute.screenTwoRoute);
+          //  Navigator.restorablePopAndPushNamed(context, AppRoute.screenTwoRoute);
           log("route stack list is ${AppNavigator.routeNameList}");
           }, child: const Text("Navigate"),) ,),
       ),

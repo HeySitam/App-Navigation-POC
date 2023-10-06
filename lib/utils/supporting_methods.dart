@@ -17,6 +17,12 @@ navigateUsingPushNamed(BuildContext context, String routeName) {
       routeName);
 }
 
+navigateUsingRestorablePushNamed(BuildContext context, String routeName) {
+  Navigator.restorablePushNamed(
+      context,
+      routeName);
+}
+
 navigateUsingPushAndRemoveUntil(BuildContext context, Widget screen, String routeName) {
   Navigator.pushAndRemoveUntil(
       context,

@@ -19,7 +19,13 @@ class AppNavigator {
     _routeNameList.add(routeName);
   }
 
-  static pushAndRemoveUntil<T extends Object?>(BuildContext context, Route<T> newRoute, RoutePredicate predicate){
-    Navigator.pushAndRemoveUntil(context, newRoute, predicate);
+  static pushAndRemoveUntil<T extends Object?>(BuildContext context, Route<T> newRoute,{ String? removeUntilRouteName, RoutePredicate? predicate} ){
+    if(removeUntilRouteName != null){
+      Navigator.pushAndRemoveUntil(context, newRoute, ModalRoute.withName(removeUntilRouteName));
+    } else if(predicate != null){
+      Navigator.pushAndRemoveUntil(context, newRoute, predicate);
+    } else if(removeUntilRouteName != null && predicate != null) {
+      throw Exception("use either removeUntilRouteName or predicate");
+    }
   }
 }

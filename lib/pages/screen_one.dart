@@ -13,10 +13,17 @@ class ScreenOne extends StatelessWidget {
       body: ColoredBox(
         color: Colors.amber,
         child: Center(
-          child: ElevatedButton(onPressed: (){
-           // navigateUsingPush(context, const ScreenTwo(), AppRoute.screenTwoRoute);
-            navigateUsingPushNamed(context, AppRoute.screenTwoRoute);
-          }, child: const Text("Navigate to Screen Two"),) ,),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const TextField(),
+              ElevatedButton(onPressed: (){
+                // navigateUsingPush(context, const ScreenTwo(), AppRoute.screenTwoRoute);
+                navigateUsingPushNamed(context, AppRoute.screenTwoRoute);
+              }, child: const Text("Navigate to Screen Two"),)
+            ],
+          )
+          ,),
       ),
     );
   }

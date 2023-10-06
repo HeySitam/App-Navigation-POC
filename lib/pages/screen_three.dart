@@ -14,10 +14,17 @@ class ScreenThree extends StatelessWidget {
       body: ColoredBox(
         color: Colors.cyan,
         child: Center(
-          child: ElevatedButton(onPressed: (){
-           // navigateUsingPush(context, const ScreenFour(), AppRoute.screenFourRoute);
-            navigateUsingPushNamed(context, AppRoute.screenFourRoute);
-          }, child: const Text("Navigate to Screen Four"),) ,),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const TextField(),
+              ElevatedButton(onPressed: (){
+                // navigateUsingPush(context, const ScreenTwo(), AppRoute.screenTwoRoute);
+                navigateUsingPushNamed(context, AppRoute.screenFourRoute);
+              }, child: const Text("Navigate to Screen Four"),)
+            ],
+          )
+        ),
       ),
     );
   }
